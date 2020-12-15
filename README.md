@@ -1,1 +1,1 @@
-# minion.github.io
+# minion
