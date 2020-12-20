@@ -1,635 +1,244 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Hello. I&#x27;m Sampada. 👋</title><style>
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	text-indent: -1.7em;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
-
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
-
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
-
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
-
-.highlight-default {
-}
-.highlight-gray {
-	color: rgb(155,154,151);
-}
-.highlight-brown {
-	color: rgb(100,71,58);
-}
-.highlight-orange {
-	color: rgb(217,115,13);
-}
-.highlight-yellow {
-	color: rgb(223,171,1);
-}
-.highlight-teal {
-	color: rgb(15,123,108);
-}
-.highlight-blue {
-	color: rgb(11,110,153);
-}
-.highlight-purple {
-	color: rgb(105,64,165);
-}
-.highlight-pink {
-	color: rgb(173,26,114);
-}
-.highlight-red {
-	color: rgb(224,62,62);
-}
-.highlight-gray_background {
-	background: rgb(235,236,237);
-}
-.highlight-brown_background {
-	background: rgb(233,229,227);
-}
-.highlight-orange_background {
-	background: rgb(250,235,221);
-}
-.highlight-yellow_background {
-	background: rgb(251,243,219);
-}
-.highlight-teal_background {
-	background: rgb(221,237,234);
-}
-.highlight-blue_background {
-	background: rgb(221,235,241);
-}
-.highlight-purple_background {
-	background: rgb(234,228,242);
-}
-.highlight-pink_background {
-	background: rgb(244,223,235);
-}
-.highlight-red_background {
-	background: rgb(251,228,228);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(55, 53, 47, 0.6);
-	fill: rgba(55, 53, 47, 0.6);
-}
-.block-color-brown {
-	color: rgb(100,71,58);
-	fill: rgb(100,71,58);
-}
-.block-color-orange {
-	color: rgb(217,115,13);
-	fill: rgb(217,115,13);
-}
-.block-color-yellow {
-	color: rgb(223,171,1);
-	fill: rgb(223,171,1);
-}
-.block-color-teal {
-	color: rgb(15,123,108);
-	fill: rgb(15,123,108);
-}
-.block-color-blue {
-	color: rgb(11,110,153);
-	fill: rgb(11,110,153);
-}
-.block-color-purple {
-	color: rgb(105,64,165);
-	fill: rgb(105,64,165);
-}
-.block-color-pink {
-	color: rgb(173,26,114);
-	fill: rgb(173,26,114);
-}
-.block-color-red {
-	color: rgb(224,62,62);
-	fill: rgb(224,62,62);
-}
-.block-color-gray_background {
-	background: rgb(235,236,237);
-}
-.block-color-brown_background {
-	background: rgb(233,229,227);
-}
-.block-color-orange_background {
-	background: rgb(250,235,221);
-}
-.block-color-yellow_background {
-	background: rgb(251,243,219);
-}
-.block-color-teal_background {
-	background: rgb(221,237,234);
-}
-.block-color-blue_background {
-	background: rgb(221,235,241);
-}
-.block-color-purple_background {
-	background: rgb(234,228,242);
-}
-.block-color-pink_background {
-	background: rgb(244,223,235);
-}
-.block-color-red_background {
-	background: rgb(251,228,228);
-}
-.select-value-color-default { background-color: rgba(206,205,202,0.5); }
-.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
-.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
-.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
-.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
-.select-value-color-green { background-color: rgba(0,135,107,0.2); }
-.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
-.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
-.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
-.select-value-color-red { background-color: rgba(255,0,26,0.2); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="ed044389-7121-4437-b2eb-e34268876f29" class="page sans"><header><img class="page-cover-image" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/CreateRemote.png" style="object-position:center 62.55%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://uploads-ssl.webflow.com/5e5fb69af39fe076e1ccecae/5e902a7fbc1f12f7f27dd04d_Group%201.svg"/></div><h1 class="page-title">Hello. I&#x27;m Sampada. 👋</h1></header><div class="page-body"><div id="c521de36-9b00-4bc1-a525-95e448eb925d" class="column-list"><div id="83f98220-11e7-46ce-9e39-a042b1dfdfd1" style="width:62.5%" class="column"><h2 id="965b4a75-5b90-4556-9ad4-bc9ffbbf9fa1" class="">Product Manager &amp; Maker 
-based in Scotland </h2><p id="fc4cb59f-94f3-4a17-bb2e-f57ac2ad5d40" class="">
-</p><blockquote id="72cca718-0eb3-4bdf-a5c8-5966e94d5733" class="">I advise and help early stage founders and entrepreneurs ideate, validate, test, build and launch digital products.</blockquote><p id="e194124f-ab22-49d0-9497-15e652f4555c" class="">
-</p></div><div id="acdf5d44-3df9-4ab5-b880-c1dbf3e2e0a5" style="width:37.50000000000001%" class="column"><figure id="59b5665a-fdce-45a3-a513-4fc4c80ca9db" class="image"><a href="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Group_26.png"><img style="width:192px" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Group_26.png"/></a></figure></div></div><hr id="eb158f57-c749-41fd-a026-0282652b53b9"/><div id="673c86f7-0a0f-4e47-b9fc-9c3b59217c8b" class="column-list"><div id="e94b40cb-c40e-486c-9e94-04c1f9129008" style="width:29.03225806451613%" class="column"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="0fc4304d-d39c-4837-b600-7dca0322abcf"><div style="font-size:1.5em"><img class="icon" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Ellipse_37.png"/></div><div style="width:100%"><a href="https://www.notion.so/About-bebd9e3923934b2c885ae9c92a3403c8">About</a></div></figure></div><div id="78da83bf-43c4-4291-81b6-706c1188c264" style="width:25.806451612903224%" class="column"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="78265c49-c8be-4ae1-96fc-4151f84ad8d3"><div style="font-size:1.5em"><img class="icon" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Ellipse_37%201.png"/></div><div style="width:100%"><a href="https://www.notion.so/Now-d5050b5bef9245ed9976febf5a73b9da">Now</a></div></figure></div><div id="d39c6644-7d52-451f-9355-f6fba8962ab1" style="width:25%" class="column"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="9ff8602d-6b53-4aeb-b602-c4d9efa496f5"><div style="font-size:1.5em"><img class="icon" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Ellipse_37%202.png"/></div><div style="width:100%"><a href="https://www.notion.so/SEO-f77a2ebd706a4ca5bf716af5ccfe7aef">Projects </a></div></figure></div><div id="29d66990-6320-4e7c-853b-ecaa8a750ea6" style="width:20.16129032258065%" class="column"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="4f4e8165-42fe-43e4-8506-9df3812b8675"><div style="font-size:1.5em"><img class="icon" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Ellipse_37%202.png"/></div><div style="width:100%"><a href="https://www.notion.so/SEO-f77a2ebd706a4ca5bf716af5ccfe7aef">SEO</a></div></figure><p id="c6668f3a-403f-43d4-9d3a-d0ddb65390e2" class="">
-</p></div></div><hr id="3e470970-c698-42d9-9683-8cdf0b8503bb"/><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="eb5942df-c543-48dd-ad02-13211bc7b3f5"><div style="font-size:1.5em"><img class="icon" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Ellipse_37%203.png"/></div><div style="width:100%"><a href="https://www.notion.so/Writing-e854993734964d55aaabd70c15ee3ae1">Writing</a></div></figure><p id="00f0eca9-6c33-4536-aba2-0f2ae0b5f325" class="">
-</p><div id="41a6f32d-3900-4865-8d66-fd6ed3edce8e" class="column-list"><div id="0b1213da-842b-4e12-9d4b-d91cddd94ca1" style="width:37.5%" class="column"><figure id="89550908-e767-4123-b209-d6f3decf10ce" class="image"><a href="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Group_29.png"><img style="width:192px" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Group_29.png"/></a></figure></div><div id="34027388-8f65-4a61-8c37-84733e51cff7" style="width:62.5%" class="column"><h2 id="19f74e23-447a-4898-8707-e419abe4527b" class=""><mark class="highlight-teal">About This Site</mark></h2><p id="31c6b93b-1dfb-4243-983f-76910fe87226" class="">I&#x27;ve seen a growing number of folk using Notion to create super quick landing pages, personal sites and resumes recently and decided i would give it a shot myself using my current personal site as a blueprint to see how far i could take it. </p><p id="e5faad7a-73f5-4ad8-8dc5-d3aff0cbea9d" class="">
-</p><p id="a033ec70-7f1c-4ce1-90d2-9b644df4b579" class=""><strong><mark class="highlight-yellow_background">Feel free to use this as a template.</mark></strong></p><p id="93d8b19b-a113-4275-9c14-e79e14bc65b4" class="">
-</p></div></div><hr id="2f852df0-d905-4c3c-bc04-92003b7cb629"/><h2 id="1722d50b-74a1-44ae-856f-23750f327828" class=""><mark class="highlight-teal">Latest Content</mark></h2><div id="de7eb8b7-c5c8-46cc-ba71-05faf73ced1c" class="column-list"><div id="6130de34-e90b-4ed5-b324-f1b2a714fc89" style="width:33.333333333333336%" class="column"><figure id="302cc469-2a3d-4ab8-b679-7b83386d1f9a" class="image"><a href="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Rectangle_106.png"><img style="width:1127px" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Rectangle_106.png"/></a></figure><h3 id="022964c3-26b7-4725-9531-987df09cdeca" class=""><strong>Comprehensive list of &#x27;Smoke Test&#x27; techniques</strong></h3><p id="374e64c2-d230-46aa-ab99-c6b018e28770" class="">A definitive list of modern, alternative &#x27;Smoke Test&#x27; techniques to help test early signs of desirability with your target market.</p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="743e0db7-b9c6-4498-b980-63b226f40140"><div style="font-size:1.5em"><span class="icon">🔥</span></div><div style="width:100%"><a href="https://www.samdickie.me/writing/comprehensive-list-of-smoke-test-techniques-to-test-early-signs-of-desirability">Read More</a></div></figure></div><div id="62f2a466-7203-42e1-b017-ecf4d5fd9417" style="width:33.333333333333336%" class="column"><figure id="e91c3860-e21b-4930-b7a6-ae544c42e0e7" class="image"><a href="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Rectangle_108.png"><img style="width:1127px" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Rectangle_108.png"/></a></figure><h3 id="8467ed9a-ffd6-4622-a2a8-d30f70f904bd" class=""><strong>Can I build an online shoe retailer with no shoes?</strong></h3><p id="32d971a7-49d0-484f-9a1c-38aca02c494d" class="">Turns out you can - or &#x27;could&#x27; should I say. This is Part 1 in my series of concierge MVP examples from well known tech ...</p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="8c045f21-f8af-4069-9997-03099452c15c"><div style="font-size:1.5em"><span class="icon">👟</span></div><div style="width:100%"><a href="https://www.samdickie.me/writing/can-i-build-an-online-shoe-retailer-with-no-shoes">Read More</a></div></figure></div><div id="a7db4dd8-e1ff-4863-8c2e-c3d7755160c6" style="width:33.33333333333333%" class="column"><figure id="7b1021d4-8459-4086-ba3a-1f6ac3a644ca" class="image"><a href="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Rectangle_107.png"><img style="width:1127px" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Rectangle_107.png"/></a></figure><h3 id="0247ca57-8da1-4a43-9f51-451906365869" class="">Start with Problem Validation, NOT Solution Validation</h3><p id="2e01087a-3dc5-4ec3-ac11-74a8a49e5675" class="">There is a difference between having an idea and validating an idea. Validation is the first step in moving towards learning ....</p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="eea9f237-142d-411d-b9fe-64e89bec9e2b"><div style="font-size:1.5em"><span class="icon">🛑</span></div><div style="width:100%"><a href="https://www.samdickie.me/writing/start-with-problem-validation-not-solution-validation">Read More</a></div></figure></div></div><p id="c7c6f4b6-e2f5-43b1-b9ec-27c1f8ff255a" class="">
-</p><hr id="dac0ed1c-f6e7-45b5-af3a-52e0de855d51"/><h2 id="73b9ceac-5bad-4eaa-ba37-059c6b941f2e" class=""><mark class="highlight-teal"><strong>What I Do</strong></mark></h2><div id="fda89931-9e5d-454a-93a1-fb657d615ecf" class="column-list"><div id="461c62ef-3218-4a37-8f67-eb463c4462fe" style="width:50%" class="column"><h3 id="66b346ff-9060-4b64-8bcb-93f5a91502a6" class="">💻 <strong>Product Management </strong></h3><p id="d466dbb8-48fe-4a65-ba95-125977b4de08" class="">I combine business, tech, and design in order to discover products that are valuable, feasible, and usable.</p></div><div id="17a3587a-3b16-41dc-9faa-328c76cd3d95" style="width:50%" class="column"><h3 id="ddbd25b8-d2f3-46b9-bd49-3e11244c5d1b" class="">⛔️ No Code<strong> </strong></h3><p id="b703ca6b-d4c5-4492-8d3b-c4ff1e2a9fd2" class="">I specialise in creating digital products and businesses without code in a fraction of the time and cost compared to traditional methods.</p></div></div><div id="157eef5f-239a-4db7-ab56-8cc46d87d58d" class="column-list"><div id="e822f958-82f4-4ab6-b9bf-2d6a5ab3d014" style="width:50%" class="column"><h3 id="4e2b7a6b-620a-4270-8fe5-02076b3cc690" class="">🧭 <strong>Product Strategy </strong></h3><p id="5df89c07-766d-45cf-b72d-51ebe4c39505" class="">I help teams and founders create and maintain a clear and defined product and go to market strategy.</p></div><div id="d7eeff3d-382d-4cc1-a919-2fd18fb977b4" style="width:50%" class="column"><h3 id="e6876924-0e6e-4f64-961d-98aa3b7d255d" class="">🚀 <strong>MVPs </strong></h3><p id="eb6b0c77-1771-4ebb-9b96-49ed6c0af971" class="">I create lean, highly effective MVP experiments. Testing with real people against actual problems to ensure your core assumptions are validated.</p></div></div><div id="5d598e89-a9d2-4d04-aa12-22e60abfc9e8" class="column-list"><div id="a62d9e1b-2776-4dce-a96e-f909235d5a79" style="width:50%" class="column"><h3 id="236c7951-ff60-4675-99a3-1f02e121f6a0" class="">🔎 Customer Development<strong> </strong></h3><p id="375edc63-80cb-42f0-a273-40b5c621fa72" class="">I help identify the right problems to solve so that you build something that your customers will buy, helping you learn more about your customers.</p></div><div id="593c58ed-6b91-4fa3-a77d-8a67a7654866" style="width:50%" class="column"><h3 id="becb05d8-fedc-47d3-a723-e5b80909838b" class="">👪 Community Building<strong> </strong></h3><p id="030ea18c-56a7-4593-adc5-918d6d444e92" class="">I create and grow highly engaged online audiences via email and social marketing techniques.</p></div></div><hr id="96e8d44a-5641-42e8-8c6a-b33a0617ca06"/><div id="0facdc0c-afa0-425b-8fdf-47fff6f10d68" class="column-list"><div id="6c44a207-062c-45c3-befd-1e4c0259d27d" style="width:25%" class="column"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="8552f40a-e985-47f1-a179-5a728a50a3c8"><div style="font-size:1.5em"><img class="icon" src="https://uploads-ssl.webflow.com/5e5fb69af39fe076e1ccecae/5eb5c2f9ddf6ad28af3d9cf7_logo.svg"/></div><div style="width:100%"><a href="https://twitter.com/thisdickie"><strong>Twitter</strong></a></div></figure></div><div id="656adc82-576a-4abd-b6dc-0c1e68c7fde8" style="width:25%" class="column"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="a71f1b61-4817-4a48-a90a-91a636e0a02d"><div style="font-size:1.5em"><img class="icon" src="https://uploads-ssl.webflow.com/5e5fb69af39fe076e1ccecae/5eb5c2f967097994d4b72fd9_medium.svg"/></div><div style="width:100%"><a href="https://medium.com/@samdickie"><strong>Medium</strong></a></div></figure></div><div id="5ca17144-71b4-4837-ac7a-db8b1b6b4302" style="width:25%" class="column"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="7557d0ff-9ec9-40ce-9045-abbc24b048ff"><div style="font-size:1.5em"><img class="icon" src="https://uploads-ssl.webflow.com/5e5fb69af39fe076e1ccecae/5eb5c2f917e59a4cf3c4ef37_linkedin.svg"/></div><div style="width:100%"><strong><a href="https://www.linkedin.com/in/samdickie/">LinkedIn</a></strong></div></figure></div><div id="3d177385-e7fa-4b16-ae38-d090e8000927" style="width:25%" class="column"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="1db93a53-4c86-4648-b557-100513492fbc"><div style="font-size:1.5em"><img class="icon" src="https://uploads-ssl.webflow.com/5e5fb69af39fe076e1ccecae/5eb5c2f9bf5a491907087810_product-hunt.svg"/></div><div style="width:100%"><a href="https://www.producthunt.com/@thisdickie"><strong>PH</strong></a></div></figure></div></div><div id="0b36eab1-5833-48ea-b261-702bbd0f1548" class="column-list"><div id="f227097a-7c05-43a4-8ac0-a673c2b4b5aa" style="width:20%" class="column"><figure id="bebd9e39-2393-4b2c-885a-e9c92a3403c8" class="link-to-page"><a href="https://www.notion.so/About-bebd9e3923934b2c885ae9c92a3403c8"><img class="icon" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/About%20bebd9e3923934b2c885ae9c92a3403c8/Group_1.png"/>About </a></figure></div><div id="62a7673a-b4cb-4ff4-a9da-367bcc4ac467" style="width:20%" class="column"><figure id="d5050b5b-ef92-45ed-9976-febf5a73b9da" class="link-to-page"><a href="https://www.notion.so/Now-d5050b5bef9245ed9976febf5a73b9da"><img class="icon" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Now%20d5050b5bef9245ed9976febf5a73b9da/Group_1.png"/>Now</a></figure></div><div id="a9b655d6-0a66-493b-a3ed-bab411da8cdd" style="width:22.5%" class="column"><figure id="e8549937-3496-4d55-aaab-d70c15ee3ae1" class="link-to-page"><a href="https://www.notion.so/Writing-e854993734964d55aaabd70c15ee3ae1"><img class="icon" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/Writing%20e854993734964d55aaabd70c15ee3ae1/Group_1.png"/>Writing</a></figure></div><div id="b43a4a77-c90c-4016-b2b0-f3e4169064a1" style="width:27.500000000000004%" class="column"><figure id="f77a2ebd-706a-4ca5-bf71-6af5ccfe7aef" class="link-to-page"><a href="https://www.notion.so/SEO-f77a2ebd706a4ca5bf716af5ccfe7aef"><img class="icon" src="Hello%20I&#x27;m%20Sampada%20%F0%9F%91%8B%2059b5665afdce45a3a5134fc4c80ca9db/SEO%20f77a2ebd706a4ca5bf716af5ccfe7aef/Group_1.png"/>SEO</a></figure></div><div id="37798659-798e-427b-8fb0-21f7c1ea3afb" style="width:9.999999999999998%" class="column"><figure id="4264e55a-fedf-4254-9efd-518f1c8250da" class="link-to-page"><a href="https://www.notion.so/Coming-Soon-4264e55afedf42549efd518f1c8250da"><span class="icon">🚧</span>Coming Soon</a></figure></div></div></div></article></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sampada Bhatnagar</title>
+    <meta property="og:title" content="Sampada Bhatnagar">
+    <meta name="description" content="Sampada is a Frontend developer who loves making sense of the chaos."/>
+    <meta property="og:description" content="Sampada is a Frontend developer who loves making sense of the chaos."/>
+
+    <meta property="og:site_name" content="Sampada Bhatnagar"/>
+    <meta property="og:url" content="index.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content=""/>
+    <meta name="author" content="Sampada Bhatnagar"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@">
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
+    <link rel="apple-touch-icon" href="" sizes="180x180"/>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36543481-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-36543481-1');
+    </script>
+
+    <!-- Stylesheets -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/exn3vdd.css">
+    <link rel="stylesheet" href="assets/builds/bundle-v=1602242715.css">
+    <link rel="stylesheet" href="assets/css/flipCardStyles.css">
+    <link rel="stylesheet" href="assets/css/mainStyles.css">
+
+
+    <!-- Scripts -->
+    <script src="assets/builds/bundle-v=1602242715.js" defer></script>
+
+
+</head>
+<body class="page-home" data-darkmode="false">
+<header id="header">
+    <nav class="site-nav wrapper">
+        <a class="site-title page-link active" rel="author" href="index.html">Sampada Bhatnagar</a>
+        <a class="page-link">Work</a>
+        <a class="page-link">About</a>
+    </nav>
+</header>
+
+<main class="home page-content transition-fade" aria-label="Content">
+
+    <!--------- LANDING PAGE TEXT SECTION ---------->
+    <div class="home-hero wrapper">
+        <h1 class="home-heading font-family-2">
+            <span class="lines three-lines">
+        <span class="line"><!--
+        --><span class="letter letter-1">S</span><!--
+        --><span class="letter letter-2">a</span><!--
+        --><span class="letter letter-3">m</span><!--
+        --><span class="letter letter-4">p</span><!--
+        --><span class="letter letter-5">a</span><!--
+        --><span class="letter letter-6">d</span><!--
+        --><span class="letter letter-7">a</span><!--
+
+        --><span class="letter letter-8">&nbsp;</span><!--
+
+        --><span class="letter letter-9">l</span><!--
+        --><span class="letter letter-10">o</span><!--
+        --><span class="letter letter-11">v</span><!--
+        --><span class="letter letter-12">e</span><!--
+        --><span class="letter letter-13">s</span><!--
+        --><span class="letter letter-14">&nbsp;</span><!--
+        --><span class="letter letter-15">t</span><!--
+        --><span class="letter letter-16">o</span><!--
+     --></span>
+        <span class="line"><!--
+        --><span class="letter letter-17">m</span><!--
+        --><span class="letter letter-18">a</span><!--
+        --><span class="letter letter-19">k</span><!--
+        --><span class="letter letter-20">e</span><!--
+        --><span class="letter letter-21">&nbsp;</span><!--
+        --><span class="letter letter-22">s</span><!--
+        --><span class="letter letter-23">e</span><!--
+        --><span class="letter letter-24">n</span><!--
+        --><span class="letter letter-25">s</span><!--
+        --><span class="letter letter-26">e</span><!--
+        --><span class="letter letter-27">&nbsp;</span><!--
+        --><span class="letter letter-28">o</span><!--
+        --><span class="letter letter-29">f</span><!--
+        --><span class="letter letter-30">&nbsp;</span><!--
+        --><span class="letter letter-31">t</span><!--
+        --><span class="letter letter-32">h</span><!--
+        --><span class="letter letter-33">e</span><!--
+        --><span class="letter letter-34">&nbsp;</span><!--
+     --></span>
+        <span class="line"><!--
+        --><span class="letter letter-25">c</span><!--
+        --><span class="letter letter-26">h</span><!--
+        --><span class="letter letter-27">a</span><!--
+        --><span class="letter letter-28">o</span><!--
+        --><span class="letter letter-29">s</span><!--
+
+      --></span>
+      </span>
+        </h1>
+
+    </div>
+    <!--------- LANDING PAGE TEXT SECTION ---------->
+
+    <!--------- DISPLAY WORK SECTION ---------->
+    <div class="flip_wrapper">
+
+        <!-- flip-card 1 -->
+        <div class="flip-card-container" >
+            <div class="flip-card" id="1">
+
+                <div class="card-front alore-bg-blue">
+                    <figure>
+                        <figcaption>Brohm Lake</figcaption>
+                    </figure>
+
+                    <ul>
+                        <li>Detail 1</li>
+                        <li>Detail 2</li>
+                        <li>Detail 3</li>
+                        <li>Detail 4</li>
+                        <li>Detail 5</li>
+                    </ul>
+                </div>
+
+                <div class="card-back alore-bg-blue">
+
+                    <button>Book</button>
+
+                    <div class="design-container">
+                        <span class="design design--1"></span>
+                        <span class="design design--2"></span>
+                        <span class="design design--3"></span>
+                        <span class="design design--4"></span>
+                        <span class="design design--5"></span>
+                        <span class="design design--6"></span>
+                        <span class="design design--7"></span>
+                        <span class="design design--8"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- flip-card 1 -->
+
+        <!-- flip-card 2 -->
+        <div class="flip-card-container" id="2" >
+            <div class="flip-card">
+
+                <div class="card-front blood-red-bg">
+                    <figure>
+                        <figcaption>Brohm Lake</figcaption>
+                    </figure>
+
+                    <ul>
+                        <li>Detail 1</li>
+                        <li>Detail 2</li>
+                        <li>Detail 3</li>
+                        <li>Detail 4</li>
+                        <li>Detail 5</li>
+                    </ul>
+                </div>
+
+                <div class="card-back alore-bg-blue">
+
+                    <button>Book</button>
+
+                    <div class="design-container">
+                        <span class="design design--1"></span>
+                        <span class="design design--2"></span>
+                        <span class="design design--3"></span>
+                        <span class="design design--4"></span>
+                        <span class="design design--5"></span>
+                        <span class="design design--6"></span>
+                        <span class="design design--7"></span>
+                        <span class="design design--8"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- flip-card 2 -->
+
+        <!-- flip-card 3 -->
+        <div class="flip-card-container" id="3" >
+            <div class="flip-card">
+
+                <div class="card-front grass-green-bg">
+                    <figure>
+                        <figcaption>Brohm Lake</figcaption>
+                    </figure>
+
+                    <ul>
+                        <li>Detail 1</li>
+                        <li>Detail 2</li>
+                        <li>Detail 3</li>
+                        <li>Detail 4</li>
+                        <li>Detail 5</li>
+                    </ul>
+                </div>
+
+                <div class="card-back alore-bg-blue">
+
+                    <button>Book</button>
+
+                    <div class="design-container">
+                        <span class="design design--1"></span>
+                        <span class="design design--2"></span>
+                        <span class="design design--3"></span>
+                        <span class="design design--4"></span>
+                        <span class="design design--5"></span>
+                        <span class="design design--6"></span>
+                        <span class="design design--7"></span>
+                        <span class="design design--8"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- flip-card 3 -->
+
+
+    </div>
+    <!--------- DISPLAY WORK SECTION ---------->
+
+</main>
+
+
+</body>
+</html>

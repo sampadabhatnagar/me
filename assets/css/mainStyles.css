@@ -1,0 +1,33 @@
+/* sam's main styles begin */
+
+.alore-text-blue{
+    color: #1875f0;
+}
+
+.alore-bg-blue{
+    background-color: #1875f0;
+}
+
+.blood-red-text{
+    color: #D62323
+}
+
+.blood-red-bg{
+    background-color: #D62323
+}
+
+.grass-green-bg{
+    background-color: #34AB01;
+}
+
+
+.font-family-1{
+    font-family: nimbus-sans,Helvetica,Arial,sans-serif;
+    font-style: normal;
+}
+
+.font-family-2{
+    font-family: coven,sans-serif;
+}
+
+/* sam's main styles end */
