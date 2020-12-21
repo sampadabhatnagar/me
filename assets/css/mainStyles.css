@@ -1,3 +1,26 @@
+/* background fixed circle */
+
+.home-bg {
+    position: fixed;
+    top: 0px;
+    z-index: -1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 /* sam's main styles begin */
 
 .alore-text-blue{
@@ -18,6 +41,32 @@
 
 .grass-green-bg{
     background-color: #34AB01;
+}
+
+.forest-green-bg{
+    background-color: #3bab87;
+}
+
+.fur-pink-bg{
+    background-color: #FDF0EC;
+}
+
+.frost-teal-bg{
+    background-color: #98bec8;
+}
+
+.coat-pink-bg{
+    background-color: #e9c3b8;
+}
+
+.teal-bg{
+    background-color: #224a54;
+
+}
+/* #2D97A2 */
+
+.car-black-bg{
+    background-color: #1a1a1a;
 }
 
 
