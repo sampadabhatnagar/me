@@ -176,4 +176,8 @@
     font-family: coven,sans-serif;
 }
 
+.page-resume:hover, .page-about:hover{
+    cursor: pointer;
+}
+
 /* sam's main styles end */
