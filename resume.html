@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico"/>
 
 
     <link rel="stylesheet" href="https://use.typekit.net/exn3vdd.css">
@@ -14,17 +15,48 @@
     <link rel="stylesheet" href="assets/css/mainStyles.css">
 
     <style>
-        .resume-cover{
-            object-fit: cover;
-            object-position: 50% 50%;
-            width: 100%;
-            height: auto;
+
+        .resume-wrapper{
+            position: relative;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
         }
+
         picture{
             overflow: scroll;
             width: 100%;
             margin: 10% auto;
         }
+
+        .resume-cover-1{
+            width: 44.549786%;
+            align-self: start;
+            justify-self: center;
+            position: relative;
+            margin-left: 0%;
+            margin-right: 3.58593%;
+            margin-top: 92.52996px;
+            margin-bottom: 0px;
+            grid-area: 1/1/2/2;
+        }
+
+        .resume-cover-2{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .resume-cover{
+            object-fit: cover;
+            object-position: 50% 50%;
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
     </style>
 
 </head>
@@ -41,9 +73,19 @@
     </nav>
 </header>
 
-<picture>
-    <img src="assets/images/samResume.jpg" class="resume-cover">
-</picture>
+<div class="resume-wrapper">
+    <div class="resume-cover-1">
+        <div class="resume-cover-2">
+            <picture>
+                <a href="https://drive.google.com/file/d/1Meh-FUR1eMoB92ZiOtC7wEBJxvRqJWGx/view?usp=sharing" target="_blank">
+                    <img class="resume-cover" src="assets/images/samResume.jpg" >
+                </a>
+            </picture>
+        </div>
+    </div>
+
+</div>
+
 
 
 
