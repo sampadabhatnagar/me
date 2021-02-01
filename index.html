@@ -48,11 +48,36 @@
 
     <!-- Scripts -->
     <script src="assets/builds/bundle-v=1602242715.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
+    <!-- Important style overrides -->
     <style>
 
     </style>
+
+    <script>
+        $(document).ready(function(){
+
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 300, function(){
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 
 </head>
 <body class="page-home" data-darkmode="false">
@@ -67,7 +92,7 @@
 <main class="home page-content transition-fade" aria-label="Content">
 
     <!--------- LANDING PAGE TEXT SECTION ---------->
-    <div class="home-hero wrapper">
+    <div class="home-hero wrapper" id="section1">
         <h1 class="home-heading font-family-2">
             <span class="lines three-lines">
         <span class="line"><!--
@@ -135,29 +160,30 @@
     </div>
     <!--------- LANDING PAGE TEXT SECTION ---------->
 
+<!-- scroll to next secrion -->
+<!--<div class="go_to_next">
+    <a href="#section2">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 125" version="1.1" x="80px" y="80px" width="80px"><title>Artboard 1 Copy 105</title><desc>Created with Sketch.</desc><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g fill="#000000"><path d="M32,35.0020853 L32,35.0020853 L32,64.9979147 C32,74.9433611 40.0571206,83 50,83 C59.9427143,83 68,74.9412747 68,64.9979147 L68,35.0020853 C68,25.0566389 59.9428794,17 50,17 C40.0572857,17 32,25.0587253 32,35.0020853 L32,35.0020853 Z M28,35.0020853 C28,22.8506691 37.847064,13 50,13 C62.1502645,13 72,22.8457461 72,35.0020853 L72,64.9979147 C72,77.1493309 62.152936,87 50,87 C37.8497355,87 28,77.1542539 28,64.9979147 L28,35.0020853 L28,35.0020853 Z"/><path d="M48,29.0085302 C48,27.8992496 48.8877296,27 50,27 C51.1045695,27 52,27.9019504 52,29.0085302 L52,36.9914698 C52,38.1007504 51.1122704,39 50,39 C48.8954305,39 48,38.0980496 48,36.9914698 L48,29.0085302 Z"/><path d="M50,71.1715729 L58.5857864,62.5857864 C59.366835,61.8047379 60.633165,61.8047379 61.4142136,62.5857864 C62.1952621,63.366835 62.1952621,64.633165 61.4142136,65.4142136 L51.4142136,75.4142136 C51.0236893,75.8047379 50.5118446,76 50,76 C49.4881554,76 48.9763107,75.8047379 48.5857864,75.4142136 L38.5857864,65.4142136 C37.8047379,64.633165 37.8047379,63.366835 38.5857864,62.5857864 C39.366835,61.8047379 40.633165,61.8047379 41.4142136,62.5857864 L50,71.1715729 Z"/></g></g>
+        </svg>
+    </a>
+</div>-->
+
+    <div class="go_to_next">
+        <a href="#section2">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <span class="scroll_text">Scroll down</span>
+        </a>
+    </div>
+
     <!--------- DISPLAY WORK SECTION ---------->
 
     <!-- Different Shaped Boxes -->
-    <div>
+    <div id="section2">
         <div class="section grid-items grid-items-feature-first grid-items-peak">
 
-            <a href="blog/introduction-to-ab-testing/index.html" class="grid-item post-preview" style="background-color: #3bab87">
-                <h1 class="grid-item-header" style="color: rgba(255,255,255,1)">Hackathon</h1>
 
-                <span class="grid-item-button">
-  <span class="grid-item-button-label">Read more</span>
-</span>
-
-                <div class="article article-preview"><div class="blog-banner">
-                    <div class="blog-banner-content">
-                        <img src="static/ab-testing/icon.svg" width="145px" />
-                    </div>
-                </div>
-
-                </div>
-
-                <p class="grid-item-text" style="color: rgba(255,255,255,1)">Learn</p>
-            </a>
 
             <a href="blog/chaining-styles-with-proxy/index.html" class="grid-item post-preview" style="background-color: #FDF0EC">
                 <h1 class="grid-item-header" style="color: rgba(0,0,0,1)">alore</h1>
@@ -266,10 +292,16 @@
     <!-- Different Shaped Boxes -->
 
 
-    <div data-w-id="f9bd6306-cebc-57f0-2ef4-b6bee5f9081f" class="home-bg"><div class="home-bg__video w-embed">
-        <video playsinline autoplay muted loop style="width: 100%; height: 100%; display: block; object-fit: cover;">
-        <source src="assets/videos/sam-gradient.mp4" type="video/mp4">
-    </video></div></div>
+
+    <!-- tinted fixed background -->
+    <div data-w-id="f9bd6306-cebc-57f0-2ef4-b6bee5f9081f" class="home-bg">
+        <div class="home-bg__video w-embed">
+          <video playsinline autoplay muted loop style="width: 100%; height: 100%; display: block; object-fit: cover;">
+          <source src="assets/videos/sam-gradient.mp4" type="video/mp4">
+          </video>
+        </div>
+    </div>
+    <!-- tinted fixed background -->
 
     <!--------- DISPLAY WORK SECTION ---------->
 
@@ -277,4 +309,5 @@
 
 
 </body>
+
 </html>
