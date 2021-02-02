@@ -158,12 +158,19 @@
 
 .teal-bg{
     background-color: #224a54;
-
 }
-/* #2D97A2 */
+
+.sea-green-bg{
+    background-color: #7bffe0;
+}
+
 
 .car-black-bg{
     background-color: #1a1a1a;
+}
+
+.jet-black-text{
+    color: #000;
 }
 
 
