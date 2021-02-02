@@ -187,4 +187,18 @@
     cursor: pointer;
 }
 
+
+
+.work-box-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+    .work-box-wrapper {
+        flex-direction: column;
+    }
+}
+
+
 /* sam's main styles end */
