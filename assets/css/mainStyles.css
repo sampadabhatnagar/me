@@ -204,4 +204,9 @@
     background: #689f38;
 }
 
+.medium_bg:hover{
+    background: rgba(41, 41, 41, 1);
+    color: #fff;
+}
+
 /* sam's main styles end */
