@@ -124,10 +124,6 @@
     color: #1875f0;
 }
 
-.alore-bg-blue{
-    background-color: #1875f0;
-}
-
 .blood-red-text{
     color: #D62323
 }
@@ -200,5 +196,12 @@
     }
 }
 
+.alore_bg:hover{
+    background: rgb(24 117 240 / 70%);
+}
+
+.madad_bg:hover{
+    background: #689f38;
+}
 
 /* sam's main styles end */
